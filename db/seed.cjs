@@ -18,8 +18,9 @@ const dropTables = async () => {
 const createCustomerTable = async () => {
     try {
       await client.query(`
-              CREATE TABLE IF NOT EXISTS customers (
-                  username VARCHAR(50) PRIMARY KEY,
+              CREATE TABLE IF NOT EXISTS customers(
+                  id SERIAL PRIMARY KEY,
+                  username VARCHAR(50) NOT NULL,
                   emailaddress VARCHAR(100) NOT NULL,
                   firstname VARCHAR(50) NOT NULL,
                   lastname VARCHAR(50) NOT NULL,
@@ -37,7 +38,7 @@ const createCustomerTable = async () => {
   const createBagTable = async () => {
     try{
         await client.query(`
-            CREATE TABLE IF NOT EXISTS bags (
+            CREATE TABLE IF NOT EXISTS bags(
             id SERIAL PRIMARY KEY,
             bag_name VARCHAR(50) NOT NULL,
             brand VARCHAR(50) NOT NULL,
