@@ -1,4 +1,5 @@
 const client = require("./client.cjs");
+const getSingleBag = require("./client.cjs");
 
 const dropTables = async () => {
     try{
@@ -76,6 +77,7 @@ const createCustomerTable = async () => {
     await createBagTable();
     await createCustomerTable();
     await createCartTable();
+    await getSingleBag();
     await client.end();
   }
 
