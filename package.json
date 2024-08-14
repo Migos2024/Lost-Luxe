@@ -11,10 +11,11 @@
     "preview": "vite preview",
     "seed": "node ./db/seed.cjs",
     "seed:dev": "nodemon ./db/seed.cjs",
-    "start:dev": "nodemon server.cjs",
+    "start:dev": "nodemon ./db/server.cjs",
     "start": "node server.cjs"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "node": "^22.6.0",
     "nodemon": "^3.1.4",
