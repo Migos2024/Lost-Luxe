@@ -3,6 +3,7 @@ const client = require("./client.cjs");
 const {createBag} = require(`bags.cjs`);
 const path = require('path');
 
+const getSingleBag = require("./client.cjs");
 
 const dropTables = async () => {
     try{
@@ -108,6 +109,7 @@ const createCustomerTable = async () => {
     await createCustomerTable();
     await createCartTable();
     await seedBags();
+    await getSingleBag();
     await client.end();
   }
 

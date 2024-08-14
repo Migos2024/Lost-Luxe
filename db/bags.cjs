@@ -25,11 +25,25 @@ const getAllBags = async () => {
     } catch (err){
         console.log(err);
     }
-}   
+}
 
+const getSingleBag = async () => {
+   try{
+    const oneBag = await client.query(`
+        SELECT * FROM bags
+        WHERE id = $1;
+        `, [id]);
+        return oneBag.rows[0];
+   } catch (err) {
+    console.log(err);
+    return null;
+   }
+
+}
 
 
 module.exports = {
     createBag,
-    getAllBags
+    getAllBags,
+    getSingleBag
 }
