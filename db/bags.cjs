@@ -4,12 +4,13 @@ const client = require('./client.cjs');
 const createBag = async (bagname, brand, releasedate, description, price) => {
     try{
         const bagInfo = await client.query(`
-            INSERT INTO bags (bagname, brand, releasedate, description, price)
-            VALUES ($1,$2, $3, $4, $5);
-            `, [bagname, brand, releasedate, description, price]);
+            INSERT INTO bags
+            (bag_name, brand, release_date, description, price, image_path)
+            VALUES ($1, $2, $3, $4, $5, $6)
+            `, [bag.bag_name, bag.brand, bag.release_date, bag.description, bag.price, imagePath]);
 
             console.log(bagInfo);
-            
+
     } catch (err) {
         console.log(err);
     }
