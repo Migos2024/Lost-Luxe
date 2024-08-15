@@ -3,6 +3,7 @@ const client = require('./client.cjs');
 const {createBag, getSingleBag} = require('./bags.cjs');
 const fetchCartByCustomerId = require('./cart.cjs');
 const deleteBagFromCart = require('./cart.cjs');
+const addBagToCart = require('./cart.cjs');
 const path = require('path');
 
 const dropTables = async () => {
@@ -255,6 +256,8 @@ const createCustomerTable = async () => {
     await seedBags();
     await getSingleBag(1);
     await fetchCartByCustomerId();
+    await addBagToCart();
+    await deleteBagFromCart();
     await client.end();
   }
 
