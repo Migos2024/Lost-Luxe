@@ -12,6 +12,15 @@ client.connect();
 //     res.sendFile(__dirname + '/dist/index.html')
 // })
 
+app.post ('/api/v1/login', async(res, req, next) => {
+    try {
+        console.log(req.body);
+    }catch(err) {
+        console.log(err);
+    }
+ 
+})
+
  app.get('/api/v1/bags', async (req, res, next) => {
     try {
         const bags = await getAllBags();
