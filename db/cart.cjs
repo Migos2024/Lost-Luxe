@@ -7,7 +7,7 @@ const fetchCartByCustomerId = async () => {
         const result = await client.query(`
          SELECT * FROM cart
          WHERE customer_id = $1   
-            `, [customr_id]);
+            `, [customer_id]);
             return result.rows
 
     } catch (err){
