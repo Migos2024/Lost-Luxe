@@ -4,8 +4,13 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.use(express.static('dist'));
 
 client.connect();
+
+app.get('/', (res, req, next) => {
+    res.sendFile(__dirname + '/dist/index.html')
+})
 
  app.get('/api/v1/bags', async (req, res, next) => {
     try {

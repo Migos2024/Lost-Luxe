@@ -31,7 +31,7 @@ const createCustomerTable = async () => {
                   firstname VARCHAR(50) NOT NULL,
                   lastname VARCHAR(50) NOT NULL,
                   accountnumber INT UNIQUE,
-                  password VARCHAR(20) NOT Null
+                  password VARCHAR(200) NOT Null
               );
           `);
       console.log("Customer table created successfully.");
