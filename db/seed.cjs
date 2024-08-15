@@ -2,6 +2,7 @@ require('dotenv').config();
 const client = require('./client.cjs');
 const {createBag, getSingleBag} = require('./bags.cjs');
 const fetchCartByCustomerId = require('./cart.cjs');
+const deleteBagFromCart = require('./cart.cjs');
 const path = require('path');
 
 const dropTables = async () => {

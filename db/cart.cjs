@@ -16,10 +16,21 @@ const fetchCartByCustomerId = async () => {
     }
 }
 
-// const customerId = ();
-// const cart = await fetchCartByCustomerId(customer_id);
-// if (cart) {
-//     console.log(cart);
-// }else{
-//     console.log("No cart found for customer ID", customer_id)
-// }
+const deleteBagFromCart = async (cartId) =>{
+    try{
+        await client.query(`
+         UPDATE cart
+         SET bag_id NULL
+         Where id = $1   
+            `, [cartId]);
+            return true;
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+module.exports = {
+    createCartTable,
+    fetchCartByCustomerId,
+    deleteBagFromCart
+}
