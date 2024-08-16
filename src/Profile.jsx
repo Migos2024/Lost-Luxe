@@ -1,6 +1,13 @@
 const Profile = () => {
   return (
-    <h1>This is the profile page</h1>
+    <>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div id="home">
+    <img src="../chanelBags/profile.png"></img>
+    </div>
+    </>
   )
 }
 

@@ -1,9 +1,9 @@
 import { Link, Routes, Route } from "react-router-dom"
 import Home from "./Home"
 import Products from "./products"
-import Profile from "./profile"
-import Auth from "./auth"
-import Cart from "./cart"
+import Profile from "./Profile"
+import Auth from "./Auth"
+import Cart from "./Cart"
 
 
 
@@ -12,7 +12,7 @@ function App() {
     <>
       <header>
         <nav>
-          <Link to= "/">Home/Logo</Link>
+          <Link to= "/">Home</Link>
           <Link to= "/Products">Products</Link>
           <Link to= "/Cart">Cart</Link>
           <Link to= "/Profile">Profile</Link>
@@ -32,7 +32,7 @@ function App() {
 
     </>
   )
-  
+
 }
 
 export default App

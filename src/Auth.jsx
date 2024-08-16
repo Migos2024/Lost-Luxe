@@ -1,6 +1,6 @@
 const Auth = () => {
   return (
-    <h1>This is the log in page</h1>
+    <h1>DO NOT PRESENT THIS PAGE!!!</h1>
   )
 }
 

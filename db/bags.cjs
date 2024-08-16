@@ -33,7 +33,7 @@ const getSingleBag = async (id) => {
         SELECT * FROM bags
         WHERE bags.id = $1;
         `, [id]);
-        // return oneBag.rows[0];
+        console.log(oneBag.rows[0])
    } catch (err) {
     console.log(err);
     return null;

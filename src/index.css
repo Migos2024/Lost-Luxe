@@ -1,0 +1,32 @@
+#home{
+  display:flex;
+  justify-content: center;
+}
+img{
+  height:855px;
+  border-radius: 15px;
+}
+header{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+nav{
+  display:flex;
+  justify-content: space-between;
+  width:650px;
+  height:100px;
+  align-items: center;
+}
+h1{
+  text-align: center;
+  color:whitesmoke;
+}
+*{
+  background-color: black;
+}
+a{
+  color:#c9a474;
+  font-size: 22px;
+}

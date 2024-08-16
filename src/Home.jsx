@@ -1,6 +1,13 @@
 const Home = () => {
   return (
-    <h1>This is the home page</h1>
+    <>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div id="home">
+    <img src="../chanelBags/HomePage.png"></img>
+    </div>
+    </>
   )
 }
 

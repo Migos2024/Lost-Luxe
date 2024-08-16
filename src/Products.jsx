@@ -1,6 +1,13 @@
 const Products = () => {
   return (
-    <h1>This is the products page</h1>
+    <>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div id="home">
+    <img src="../chanelBags/products.png"></img>
+    </div>
+    </>
   )
 }
 
